@@ -1,0 +1,213 @@
+/* Styles for workout page */
+
+.exercise-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #f9f9f9;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.exercise-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #e0e0e0;
+}
+.exercise-info {
+    flex: 1;
+}
+
+.topbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2em 0 0.5em 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.topbar-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 1.5em 0 1em 0;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background: #f8f8f8;
+    outline: none;
+    transition: border 0.2s;
+}
+.search-input:focus {
+    border: 1.5px solid #4a90e2;
+    background: #fff;
+}
+
+.search-btn {
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    border: none;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-btn:hover {
+    background: #3578c7;
+}
+
+.breadcrumb {
+    margin: 1.5em 0 1em 0;
+    font-size: 1.1em;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 0.5em 1.2em;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+.filter-select:focus {
+    border: 1.5px solid #4a90e2;
+    background: #fff;
+}
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5em;
+}
+.workout-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.7em 1.2em 1.2em 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 24px 0 rgba(34, 34, 68, 0.08), 0 1.5px 6px 0 rgba(34, 34, 68, 0.04);
+    border: 1.5px solid #e6e6f0;
+    min-height: 200px;
+    min-width: 0;
+    font-size: 1.13em;
+    transition: box-shadow 0.2s, border 0.2s, transform 0.15s;
+    cursor: pointer;
+}
+.workout-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(34, 34, 68, 0.16), 0 2px 8px 0 rgba(34, 34, 68, 0.08);
+    border: 1.5px solid #4a90e2;
+    transform: translateY(-3px) scale(1.025);
+}
+.workout-img {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #e0e0e0 60%, #f8f8f8 100%);
+    border-radius: 14px;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    box-shadow: 0 2px 8px #0001;
+}
+.workout-title {
+    font-weight: 700;
+    margin-bottom: 0.3em;
+    font-size: 1.18em;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #222;
+    line-height: 1.2;
+}
+.workout-target {
+    color: #3887c2;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 0.98em;
+    letter-spacing: 0.1px;
+    line-height: 1.2;
+    background: #f2f8fc;
+    border-radius: 8px;
+    padding: 0.2em 0.7em;
+    display: inline-block;
+    margin-top: 0.2em;
+}
+.gold-badge {
+    background: linear-gradient(90deg, #ffd700 60%, #fffbe6 100%);
+    color: #222;
+    border-radius: 12px;
+    padding: 0.3em 1.2em;
+    font-weight: bold;
+    margin: 0.7em 0;
+    display: inline-block;
+    border: 2px solid #e6c200;
+}
+
+@media (max-width: 900px) {
+    .topbar-bar { flex-direction: column; gap: 1em; }
+    .search-bar, .filter-bar { width: 100%; }
+}
+
+/* Pagination button styles */
+#paginationContainer {
+    margin-top: 2em;
+}
+#paginationContainer .btn {
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.08em;
+    margin: 0 0.15em;
+    background: #f8f8f8;
+    color: #4a90e2;
+    border: 1.5px solid #e6e6f0;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+#paginationContainer .btn-primary {
+    background: #4a90e2;
+    color: #fff;
+    border: 1.5px solid #4a90e2;
+}
+#paginationContainer .btn:hover:not(:disabled) {
+    background: #3578c7;
+    color: #fff;
+    border: 1.5px solid #3578c7;
+}
+#paginationContainer .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

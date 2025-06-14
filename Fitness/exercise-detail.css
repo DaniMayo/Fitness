@@ -1,0 +1,101 @@
+.exercise-detail-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px #0002;
+    max-width: 900px;
+    margin: 2.5em auto;
+    padding: 0;
+    overflow: hidden;
+}
+.exercise-header {
+    background: #4a90e2;
+    color: #fff;
+    padding: 2em 2em 1.5em 2em;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+.exercise-header .exercise-icon {
+    font-size: 2.5em;
+    background: #fff3;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exercise-header .exercise-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: capitalize;
+}
+.exercise-detail-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+}
+.exercise-media {
+    flex: 1 1 320px;
+    min-width: 320px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+.exercise-media img, .exercise-media iframe, .exercise-media video {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px #0001;
+}
+.exercise-info {
+    flex: 2 1 320px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.exercise-section {
+    background: #f8fafd;
+    border-radius: 12px;
+    padding: 1.2em 1.5em;
+    margin-bottom: 0;
+    box-shadow: 0 1px 4px #0001;
+}
+.exercise-section b {
+    color: #4a90e2;
+    text-transform: capitalize;
+}
+.muscle-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #4a90e2 0%, #38f9d7 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.3em 1.1em;
+    margin: 0.2em 0.5em 0.2em 0;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px #0001;
+    text-transform: capitalize;
+}
+.back-link {
+    display: inline-block;
+    margin: 1.5em 2em 1em 2em;
+    color: #4a90e2;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.back-link:hover {
+    color: #38f9d7;
+    text-decoration: underline;
+}
+@media (max-width: 800px) {
+    .exercise-detail-flex { flex-direction: column; padding: 1em; gap: 1em; }
+    .exercise-header { flex-direction: column; align-items: flex-start; gap: 0.5em; padding: 1.5em 1em 1em 1em; }
+    .back-link { margin: 1em 1em 0.5em 1em; }
+}

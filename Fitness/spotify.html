@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="spotify.css">
+</head>
+<body>
+<div class="main-container sidebar-open">
+    <div class="main-row">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
+            <!-- Profile at top -->
+            <div class="sidebar-profile">
+                <img src="https://placehold.co/48x48/38f9d7/fff?text=U" class="profile-pic" id="profilePic" alt="Profile">
+                <div>
+                    <div id="profileName" class="profile-name">User Name</div>
+                    <a href="#" class="profile-edit" id="editProfile">Edit Profile</a>
+                </div>
+            </div>
+            <a href="#" class="sidebar-brand">
+                <span class="sidebar-title">FitTrack</span>
+            </a>
+            <ul class="sidebar-nav">
+                
+                <li>
+                    <a href="workout.html" class="nav-link"><span class="nav-icon">🚴</span>Workout</a>
+                </li>
+                <li>
+                    <a href="meals.html" class="nav-link"><span class="nav-icon">🍳</span>Meals</a>
+                </li>
+                <li>
+                    <a href="spotify.html" class="nav-link active"><span class="nav-icon">🎵</span>Music</a>
+                </li>
+                <li>
+                    <a href="meditation.html" class="nav-link"><span class="nav-icon">🧘</span>Meditation</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Notifications -->
+            <div id="alertPlaceholder"></div>
+            <!-- Search Bar -->
+            <form class="search-bar" onsubmit="return false;">
+                <input class="search-input" type="search" id="searchInput" placeholder="Search songs, artists, albums...">
+                <button class="search-btn" id="searchBtn" type="button">&#128269;</button>
+            </form>
+            <div class="content-row" style="flex-direction: row;">
+                <!-- LEFT: Your Playlist and Song List/Search -->
+                <div style="flex:2; min-width:340px; max-width:600px; display:flex; flex-direction:column; gap:24px;">
+                    <div class="playlist-section">
+                        <div class="playlist-title">Your Playlists</div>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2SM6rniZl84fEyMCB5KMQB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <ul class="playlist-list" id="playlistList">
+                            <!-- Playlists will be loaded here -->
+                        </ul>
+                    </div>
+                    <div class="playlist-section song-list-section" style="margin-bottom:0;">
+                        <div class="playlist-title">Songs</div>
+                        <ul class="playlist-list" id="songList">
+                            <!-- Songs will be loaded here -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- RIGHT: Second Playlist and Now Playing -->
+                <div style="flex:3; display:flex; flex-direction:column; gap:24px;">
+                    <div class="playlist-section">
+                        <div class="playlist-title">Second Playlist</div>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2237sMNMlXS4wWLgdQ1UuV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="now-playing-section" style="flex:unset;">
+                        <div class="now-playing-card">
+                            <img id="albumArt" class="album-art" src="https://placehold.co/100x100/43e97b/fff?text=♪" alt="Album Art">
+                            <div class="now-playing-info">
+                                <div class="now-playing-title" id="trackTitle">No song playing</div>
+                                <div class="now-playing-artist" id="trackArtist"></div>
+                                <div class="now-playing-album" id="albumName"></div>
+                                <div class="player-controls">
+                                    <button class="player-btn" id="prevBtn">&#9198;</button>
+                                    <button class="player-btn" id="playPauseBtn">&#9654;</button>
+                                    <button class="player-btn" id="nextBtn">&#9197;</button>
+                                    <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1" class="volume-bar">
+                                </div>
+                                <div class="player-progress">
+                                    <span id="currentTime" class="progress-time">0:00</span>
+                                    <div class="progress-bar-custom">
+                                        <div class="progress" id="progress" style="width:0%;height:100%"></div>
+                                    </div>
+                                    <span id="duration" class="progress-time">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="audioPlayer"></audio>
+<!-- External JS -->
+<script src="spotify.js"></script>
+</body>
+</html>

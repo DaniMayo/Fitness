@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meals Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="meals.css">
+</head>
+<body>
+<div class="main-container sidebar-open">
+    <div class="main-row">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
+            <div class="sidebar-profile">
+                <img src="https://placehold.co/48x48/38f9d7/fff?text=U" class="profile-pic" id="profilePic" alt="Profile">
+                <div>
+                    <div id="profileName" class="profile-name">User Name</div>
+                    <a href="#" class="profile-edit" id="editProfile">Edit Profile</a>
+                </div>
+            </div>
+            <a href="#" class="sidebar-brand">
+                <span class="sidebar-title">FitTrack</span>
+            </a>
+            <ul class="sidebar-nav">
+                <li><a href="workout.html" class="nav-link"><span class="nav-icon">🚴</span>Workout</a></li>
+                <li><a href="nutrition.html" class="nav-link active"><span class="nav-icon">🍳</span>Meals</a></li>
+                <li><a href="spotify.html" class="nav-link"><span class="nav-icon">🎵</span>Music</a></li>
+                <li><a href="meditation.html" class="nav-link"><span class="nav-icon">🧘</span>Meditation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Track Your Meals</h1>
+            </div>
+
+            <!-- Search Bar -->
+            <form class="search-bar" onsubmit="return false;">
+                <input class="search-input" type="search" id="searchInput" placeholder="Search food items">
+                <button class="search-btn" id="searchBtn" type="button">&#128269;</button>
+            </form>
+
+            <!-- Meal Tracker Section -->
+            <div class="meal-section">
+                <h2>Meals</h2>
+                <div class="meal">
+                    <h3>Breakfast</h3>
+                    <button class="meal-btn" id="addBreakfastBtn">Add to Breakfast</button>
+                    <span id="breakfastCalories">0</span>
+                    <ul id="breakfastList"></ul>
+                </div>
+                <div class="meal">
+                    <h3>Lunch</h3>
+                    <button class="meal-btn" id="addLunchBtn">Add to Lunch</button>
+                    <span id="lunchCalories">0</span>
+                    <ul id="lunchList"></ul>
+                </div>
+                <div class="meal">
+                    <h3>Dinner</h3>
+                    <button class="meal-btn" id="addDinnerBtn">Add to Dinner</button>
+                    <span id="dinnerCalories">0</span>
+                    <ul id="dinnerList"></ul>
+                </div>
+            </div>
+
+            <!-- Search Results -->
+            <div class="results">
+                <ul id="resultsList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- External JS -->
+<script src="meals.js"></script>
+</body>
+</html>
